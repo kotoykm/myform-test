@@ -1,0 +1,15 @@
+<h1>Crear nuevo post</h1>
+<hr>
+
+<%= form_with url: 'posts/create', model:@post, method: :post do |form| %>
+    <%= form.label :title, "Título del post"%> <br>
+    <%= form.text_field :title, name: "post[title]" %> <br>
+
+    <%= form.label :content, "Contenido del post" %> <br>
+    <%= form.text_field :content, name: "post[content]"%> <br>
+
+    <%= form.label :url, "Url de una imagen" %> <br>
+    <%= form.text_field :url, name: "post[url]"%> <br><br>
+
+    <%=form.submit%>
+<%end%>
