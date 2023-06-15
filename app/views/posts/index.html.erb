@@ -1,9 +1,13 @@
 <div class="mt-5">
-    <h2>Publicaciones hasta el momento</h2>
+    <h1>Publicaciones del blog</h1>
     <% @post.each do |u| %>
         <hr>
         <h4><%= u.title %></h4>
-        <p><%= u.content%></p>
-        <img src="<%= u.url%>" alt="img">
+        <div class="row">
+            <div class="col-8">
+                <p><%= u.content%></p>
+            </div>
+            <div class="col-4"><img src="<%= u.url%>" alt="img"></div>
+        </div>
     <%end%>
 </div>
