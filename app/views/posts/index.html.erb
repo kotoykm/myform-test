@@ -1,3 +1,9 @@
-<h1>¡Bienvenido a nuestro creador de publicaciones!</h1>
-<hr>
-<%= link_to "Ir al creador de publicaciones", nueva_publicacion_path %>
+<div class="mt-5">
+    <h2>Publicaciones hasta el momento</h2>
+    <% @post.each do |u| %>
+        <hr>
+        <h4><%= u.title %></h4>
+        <p><%= u.content%></p>
+        <img src="<%= u.url%>" alt="img">
+    <%end%>
+</div>

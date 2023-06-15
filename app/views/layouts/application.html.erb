@@ -15,6 +15,12 @@
     <nav class="navbar bg-dark py-3">
       <div class="container-fluid">
         <%=link_to "posts.com", root_path, class: "nav-link text-white px-5 fs-2" %>
+        <ul class="navbar-nav me-auto pt-1">
+          <li class="nav-item">
+            <%= link_to "Nueva publicación", nueva_publicacion_path, class: "nav-link text-white text-start" %>
+          </li>
+        </ul>
+        
       </div>
     </nav>
     <div class="container mt-5"><%= yield %></div>

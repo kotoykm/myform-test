@@ -2,14 +2,24 @@
 <hr>
 
 <%= form_with url: 'posts/create', model:@post, method: :post do |form| %>
-    <%= form.label :title, "Título del post"%> <br>
-    <%= form.text_field :title, name: "post[title]" %> <br>
+    <div class="col-4">
+        <div class="mb-4" >
+            <%= form.label :title, "Título del post", class: "form-label fs-5" %>
+            <%= form.text_field :title, name: "post[title]", class: "form-control"  %>
+        </div>
 
-    <%= form.label :content, "Contenido del post" %> <br>
-    <%= form.text_field :content, name: "post[content]"%> <br>
+        <div class="mb-4" >
+            <%= form.label :content, "Contenido del post", class: "form-label fs-5" %>
+            <%= form.text_field :content, name: "post[content]", class: "form-control" %>
+        </div>
 
-    <%= form.label :url, "Url de una imagen" %> <br>
-    <%= form.text_field :url, name: "post[url]"%> <br><br>
+        <div class="mb-4" >
+            <%= form.label :url, "Url de una imagen", class: "form-label fs-5" %>
+            <%= form.text_field :url, name: "post[url]", class: "form-control" %>
+        </div>
 
-    <%=form.submit%>
+        <div class="mb-4" >
+            <%=form.submit "Publicar", class: "btn btn-dark" %>
+        </div>
+    </div>
 <%end%>
