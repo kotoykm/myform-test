@@ -1,0 +1,15 @@
+<div class="mt-5">
+    <h1>Base de datos de periodistas</h1>
+    <hr>
+    <div class="row mt-4">
+        <% @journalist.each do |u| %>
+            <div class="col-7 border-bottom mb-4">
+                <div class="py-3">
+                    <p><span class="fw-bold">Nombre:</span> <%= u.name%></p>
+                    <p><span class="fw-bold">Apellido:</span> <%= u.lastname%></p>
+                    <p><span class="fw-bold">Especialidad:</span> <%= u.speciality%></p>
+                </div>
+            </div>
+        <%end%>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<h1>Añadir nuevo periodista</h1>
+<hr>
+
+<%= form_with url: '../journalists/create', model: @journalist, method: :post do |form| %>
+    <div class="col-4">
+        <h3 class="mb-4">Datos del periodista</h3>
+        <div class="mb-4">
+            <%= form.label :name, "Nombre", class: "form-label fs-5" %>
+            <%= form.text_field :name, name: "journalist[name]", class: "form-control"  %>
+        </div>
+
+        <div class="mb-4">
+            <%= form.label :lastname, "Apellido", class: "form-label fs-5" %>
+            <%= form.text_field :lastname, name: "journalist[lastname]", class: "form-control" %>
+        </div>
+
+        <div class="mb-4">
+            <%= form.label :speciality, "Especialidad", class: "form-label fs-5" %>
+            <%= form.text_field :speciality, name: "journalist[speciality]", class: "form-control" %>
+        </div>
+
+        <div class="mb-4">
+            <%=form.submit "Ingresar", class: "btn btn-dark" %>
+        </div>
+    </div>
+<%end%>
