@@ -1,0 +1,1 @@
+Post.new(title: "Hello",content: "asas",url: "nose")

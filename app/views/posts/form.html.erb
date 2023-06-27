@@ -1,20 +1,20 @@
-<h1>Crear nuevo post</h1>
+<h1>Nueva entrada</h1>
 <hr>
 
 <%= form_with url: 'posts/create', model:@post, method: :post do |form| %>
     <div class="col-4">
         <div class="mb-4" >
-            <%= form.label :title, "Título del post", class: "form-label fs-5" %>
+            <%= form.label :title, "Título del post", class: "form-label fs-5 fw-300" %>
             <%= form.text_field :title, name: "post[title]", class: "form-control"  %>
         </div>
 
         <div class="mb-4" >
-            <%= form.label :content, "Contenido del post", class: "form-label fs-5" %>
-            <%= form.text_field :content, name: "post[content]", class: "form-control" %>
+            <%= form.label :content, "Contenido del post", class: "form-label fs-5 fw-300" %>
+            <%= form.text_area :content, name: "post[content]", class: "form-control", size: "50x7" %> <!--Esto fue modificado, se le añadio un size:-->
         </div>
 
         <div class="mb-4" >
-            <%= form.label :url, "Url de una imagen", class: "form-label fs-5" %>
+            <%= form.label :url, "Imagen de acompañamiento (url)", class: "form-label fs-5 fw-300" %>
             <%= form.text_field :url, name: "post[url]", class: "form-control" %>
         </div>
 

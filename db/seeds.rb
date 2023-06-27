@@ -9,3 +9,4 @@
 10.times do |u|
     Journalist.create(name: "Periodista #{u+1}", lastname: "Apellido #{u+1}", speciality: "some")
 end
+
